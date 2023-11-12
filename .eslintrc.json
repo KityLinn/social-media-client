@@ -12,8 +12,6 @@
           "extends": ["plugin:jest/recommended"],
           "rules": { "jest/prefer-expect-assertions": "off" },
           "globals": {
-            "window": true,
-            "document": true,
             "global": true
           }
         }
