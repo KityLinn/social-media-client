@@ -1,6 +1,6 @@
 {
   "name": "css-frameworks-ca",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Test",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,6 @@
     "test-e2e": "cypress open",
     "test-e2e-report": "cypress run --reporter mochawesome",
     "test-e2e-cli": "cypress run"
-    
   },
   "keywords": [],
   "author": "Noroff",
