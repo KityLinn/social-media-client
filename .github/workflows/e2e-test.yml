@@ -18,6 +18,8 @@ jobs:
       - name: Run cypress test
         with:
         env: true
+      - name: Test Build End-To-End Tests
+        run: npm run test-e2e-cli
         env:
-          TEST_EMAIL: ${{secrets.loginEmail}}
-          TEST_PASSWORD: ${{secrets.loginPassword}}
+          loginEmail: ${{secrets.loginEmail}}
+          loginPassword: ${{secrets.loginPassword}}
