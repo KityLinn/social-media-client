@@ -20,6 +20,3 @@ jobs:
         env: true
       - name: Test Build End-To-End Tests
         run: npm run test-e2e-cli
-        env:
-          LOGINEMAIL: ${{secrets.LOGINEMAIL}} 
-          LOGINPASSWORD: ${{secrets.LOGINPASSWORD}}
