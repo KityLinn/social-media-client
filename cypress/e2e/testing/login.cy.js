@@ -10,8 +10,8 @@ describe("LOGING TESTING", () => {
     cy.wait(1000);
     cy.get("#registerForm > .modal-footer > .btn.btn-outline-success").click();
     cy.wait(1000);
-    cy.get("#loginEmail").type(Cypress.env("loginEmail"));
-    cy.get("#loginPassword").type(Cypress.env("loginPassword"));
+    cy.get("#loginEmail").type(Cypress.env("LOGINEMAIL"));
+    cy.get("#loginPassword").type(Cypress.env("LOGINPASSWORD"));
     cy.get("#loginForm > .modal-footer > .btn-success").click();
     cy.wait(1000);
     cy.get(".profile-name").should("have.text", "testKit2");
