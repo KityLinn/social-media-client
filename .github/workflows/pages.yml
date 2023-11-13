@@ -36,11 +36,11 @@ jobs:
         run: npm run build
       - name: Replace placeholders with our secret variables
         uses: falnyr/replace-env-vars-action@v1.3.2
-           env: 
-           LOGINEMAIL: ${{secrets.LOGINEMAIL}} 
-           LOGINPASSWORD: ${{secrets.LOGINPASSWORD}}
-    with:
-      filename: login.cy.js
+        env: 
+          LOGINEMAIL: ${{secrets.LOGINEMAIL}} 
+          LOGINPASSWORD: ${{secrets.LOGINPASSWORD}}
+        with:
+          filename: login.cy.js
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
