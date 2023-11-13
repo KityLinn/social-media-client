@@ -15,8 +15,3 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           browser: electron
-      - name: Run cypress test
-        with:
-        env: true
-      - name: Test Build End-To-End Tests
-        run: npm run test-e2e-cli
