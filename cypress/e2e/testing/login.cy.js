@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-const url = "http://127.0.0.1:5500/index.html";
+const url = "https://kitylinn.github.io/social-media-client/";
 
 describe("LOGING TESTING", () => {
   it("logs in and checks profile", () => {
