@@ -15,3 +15,9 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           browser: electron
+      - name: Run cypress test
+        with:
+        env: true
+    env:
+      username: ${{secrets.loginEmail}}
+      password: ${{secrets.loginPassword}}
