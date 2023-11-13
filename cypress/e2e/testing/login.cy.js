@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
 
+import "dotenv/config";
+
 const url = "https://kitylinn.github.io/social-media-client/";
 
 describe("LOGING TESTING", () => {
@@ -8,8 +10,8 @@ describe("LOGING TESTING", () => {
     cy.wait(1000);
     cy.get("#registerForm > .modal-footer > .btn.btn-outline-success").click();
     cy.wait(1000);
-    cy.get("#loginEmail").type("testKit2@noroff.no");
-    cy.get("#loginPassword").type("testtestybleh");
+    cy.get("#loginEmail").type(Cypress.env("loginEmail"));
+    cy.get("#loginPassword").type(Cypress.env("loginPassword"));
     cy.get("#loginForm > .modal-footer > .btn-success").click();
     cy.wait(1000);
     cy.get(".profile-name").should("have.text", "testKit2");
@@ -33,8 +35,8 @@ describe("LOGING TESTING", () => {
     cy.wait(1000);
     cy.get("#registerForm > .modal-footer > .btn.btn-outline-success").click();
     cy.wait(1000);
-    cy.get("#loginEmail").type("testKit2@noroff.no");
-    cy.get("#loginPassword").type("testtestybleh");
+    cy.get("#loginEmail").type(Cypress.env("loginEmail"));
+    cy.get("#loginPassword").type(Cypress.env("loginPassword"));
     cy.get("#loginForm > .modal-footer > .btn-success").click();
     cy.wait(1000).then(() => {
       expect(localStorage.getItem("token").length).to.be.greaterThan(3);
